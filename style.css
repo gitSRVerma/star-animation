@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    /* to hide the scrollbar on the side */
+}
+
+span{
+    background: url("https://cdn-icons-png.flaticon.com/512/1040/1040230.png") ;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    pointer-events: none;
+    /* to make it invisible we use this.. */
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 10s linear;
+}
+
+/* for animation  */
+
+@keyframes animate {
+    0%{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0);
+    }
+    100%{
+        transform: translate(-50%, -5000%);
+        opacity: 0; 
+        /* so that last occuring star is invisible .. */
+        filter: hue-rotate(1000deg);
+        /* to change the colour of the star */
+    }
+    
+}
